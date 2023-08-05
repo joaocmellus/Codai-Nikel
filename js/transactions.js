@@ -80,7 +80,7 @@ function logout() {
     window.location.href = "index.html";
 };
 
-function getTransactions(message) {
+function getTransactions() {
     const transactions = data.transactions;
     let transactionsHtml = ``
 
@@ -102,8 +102,8 @@ function getTransactions(message) {
             </tr>
             `
         });
-        document.getElementById("transactions-list").innerHTML = transactionsHtml;
     };
+    document.getElementById("transactions-list").innerHTML = transactionsHtml;
 };
 
 function getCheckBoxes() {
@@ -143,9 +143,9 @@ function deleteItems() {
             elementsIndexes.push(index-1);
         };
     })
-
+    console.table(data.transactions)
     deleteData(elementsIndexes);
-
+    console.log(data.transactions)
     getTransactions();
     alert("Lançamentos removidos com sucesso.");
 }
