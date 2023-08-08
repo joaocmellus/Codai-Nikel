@@ -148,7 +148,6 @@ function getTotal() {
     let total = 0;
 
     transactions.forEach((item) => {
-        console.log(item)
         if(item.type === "1") {
             total += item.value;
         } else {

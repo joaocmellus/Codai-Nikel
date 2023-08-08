@@ -142,10 +142,9 @@ function deleteItems() {
             let index = checkbox.parentNode.parentNode.rowIndex
             elementsIndexes.push(index-1);
         };
-    })
-    console.table(data.transactions)
+    });
     deleteData(elementsIndexes);
-    console.log(data.transactions)
+    document.getElementById("button-trash").style.display = "none";
     getTransactions();
     alert("Lançamentos removidos com sucesso.");
 }
